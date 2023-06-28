@@ -1,3 +1,8 @@
 footer{
-    background-color: antiquewhite;
+  
+}
+.card{
+    background-color: rgb(92, 85, 73);
+    color: white;
+    border-radius: 0%;
 }
