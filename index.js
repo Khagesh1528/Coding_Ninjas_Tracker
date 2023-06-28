@@ -6,13 +6,14 @@ const db = require('./config/mongoose');
 // Require the partial Express Layout
 const expressLayouts = require('express-ejs-layouts');
 
-
-
-app.use(express.urlencoded());
-// access the css file
-app.use(express.static('assets'));
 //  Use Express Ejs Layout
 app.use(expressLayouts);
+// access the css file
+app.use(express.static('assets'));
+app.use(express.urlencoded());
+
+
+
 //  link css inside head 
 app.set('layout extractStyles', true);
 app.set('layout extractScripts', true);
