@@ -5,10 +5,10 @@ const path = require('path')
 // Connection To MongoDb
 const db = require('./config/mongoose');
 // Require the partial Express Layout
-// const expressLayouts = require('express-ejs-layouts');
+const expressLayouts = require('express-ejs-layouts');
 
 //  Use Express Ejs Layout
-// app.use(expressLayouts);
+app.use(expressLayouts);
 // access the css file
 app.use(express.static('assets'));
 // app.use(express.urlencoded());
@@ -16,8 +16,8 @@ app.use(express.static('assets'));
 
 
 //  link css inside head 
-// app.set('layout extractStyles', true);
-// app.set('layout extractScripts', true);
+app.set('layout extractStyles', true);
+app.set('layout extractScripts', true);
 // view engine setup
 app.set('view engine','ejs');
 app.set('views',path.join(__dirname,'views'));
